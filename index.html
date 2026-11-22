@@ -1,0 +1,922 @@
+<!doctype html>
+
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+      name="viewport"
+    />
+    <title>
+      IC-80 Artisanal Atelier | Alcoholic Ice Cream &amp; Bespoke Catering
+    </title>
+    <!-- Google Fonts: Syne & Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;family=Syne:wght@600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS v3 with Plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                cream: "#FAF7F2",
+                creamLight: "#FCF9F4",
+                noir: "#181716",
+                charcoal: "#262422",
+                red: "#f12b2b",
+                sky: "#0284C7",
+                skyLight: "#38BDF8",
+                muted: "#7A7672",
+              },
+            },
+            fontFamily: {
+              syne: ["Syne", "sans-serif"],
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Custom Styles for Typography & UI Polish -->
+    <style data-purpose="typography">
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background-color: #faf7f2;
+        color: #181716;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      .font-heading {
+        font-family: "Syne", sans-serif;
+      }
+    </style>
+    <style data-purpose="custom-decorations">
+      .frost-glass {
+        background: rgba(250, 247, 242, 0.88);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+      }
+      .badge-glow {
+        box-shadow: 0 0 20px -3px rgba(255, 122, 48, 0.4);
+      }
+      .ice-shimmer {
+        background: linear-gradient(
+          135deg,
+          rgba(56, 189, 248, 0.08) 0%,
+          rgba(255, 122, 48, 0.06) 100%
+        );
+      }
+    </style>
+    <!-- Project stylesheet -->
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body
+    class="bg-brand-cream text-brand-noir min-h-screen flex flex-col selection:bg-brand-red selection:text-white pb-6"
+  >
+    <!-- BEGIN: Header -->
+    <header
+      class="sticky top-0 z-50 frost-glass border-b border-brand-noir/5 transition-all duration-300"
+      data-purpose="primary-header"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 min-h-16 flex items-center justify-between"
+      >
+        <!-- Logo Wordmark -->
+        <a
+          aria-label="IC-80 Atelier Home"
+          class="flex items-center gap-1 group"
+          href="#"
+        >
+          <img class="logo" src="./assets/unnamed.jpg">
+          
+          <span
+            class="ml-2 hidden xs:inline-block text-[10px] tracking-widest font-semibold uppercase px-2 py-0.5 rounded bg-brand-charcoal/5 border border-brand-charcoal/10"
+            >Atelier</span
+          >
+        </a>
+        <!-- Desktop Nav (inline on large screens) -->
+        <nav
+          class="hidden lg:flex items-center gap-6 xl:gap-8 font-medium text-sm"
+          aria-label="Primary"
+        >
+          <a
+            class="text-brand-noir hover:text-brand-red transition-colors whitespace-nowrap"
+            href="#offerings"
+            >Tailored Offerings</a
+          >
+          <a
+            class="text-brand-noir hover:text-brand-red transition-colors whitespace-nowrap"
+            href="Buenadillas.html"
+            >BUENA'DILLAS</a
+          >
+          <a
+            class="text-brand-noir hover:text-brand-red transition-colors whitespace-nowrap"
+            href="#why-choose"
+            >Why IC-80</a
+          >
+          <a
+            class="text-brand-noir hover:text-brand-red transition-colors whitespace-nowrap"
+            href="#portfolio"
+            >Curated Portfolio</a
+          >
+          <a
+            class="text-brand-red font-bold transition-colors whitespace-nowrap"
+            href="#contact"
+            >Book Private Catering</a
+          >
+        </nav>
+        <!-- Actions & Nav Elements -->
+        <div class="flex items-center gap-3">
+          <!-- Order Today Quick Button -->
+          <a
+            class="inline-flex items-center justify-center px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-brand-red text-white text-xs sm:text-sm font-bold tracking-wide shadow-sm hover:bg-brand-red/95 active:scale-95 transition-all"
+            href="#order"
+          >
+            <span>Order Today</span>
+            <svg
+              class="w-3.5 h-3.5 ml-1.5 stroke-[2.5]"
+              fill="none"
+              stroke="currentColor"
+              viewbox="0 0 24 24"
+            >
+              <path
+                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </a>
+          <!-- Mobile Menu Trigger -->
+          <button
+            aria-label="Toggle navigation menu"
+            class="lg:hidden p-2.5 rounded-full bg-white border border-brand-charcoal/10 text-brand-noir hover:bg-stone-50 active:scale-95 focus:outline-none"
+            id="mobile-menu-toggle"
+            type="button"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewbox="0 0 24 24"
+            >
+              <path
+                d="M4 6h16M4 12h16m-7 6h7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Collapsible Mobile Drawer -->
+      <div
+        class="hidden lg:!hidden border-t border-brand-noir/10 bg-brand-creamLight px-6 py-5 shadow-xl"
+        id="mobile-nav-menu"
+      >
+        <nav class="flex flex-col space-y-3 font-medium text-sm">
+          <a
+            class="py-1 text-brand-noir hover:text-brand-red transition-colors"
+            href="#offerings"
+            >Tailored Offerings</a
+          >
+          <a
+            class="py-1 text-brand-noir hover:text-brand-red transition-colors"
+            href="Buenadillas.html"
+            >BUENA'DILLAS</a
+          >
+          <a
+            class="py-1 text-brand-noir hover:text-brand-red transition-colors"
+            href="#why-choose"
+            >Why IC-80</a
+          >
+          <a
+            class="py-1 text-brand-noir hover:text-brand-red transition-colors"
+            href="#portfolio"
+            >Curated Portfolio</a
+          >
+          <a
+            class="py-1 text-brand-red font-bold transition-colors"
+            href="#contact"
+            >Book Private Catering</a
+          >
+        </nav>
+      </div>
+    </header>
+    <!-- END: Header -->
+    <main>
+      <!-- BEGIN: HeroSection -->
+      <section
+        class="relative pt-6 pb-12 sm:pt-12 sm:pb-16 overflow-hidden"
+        data-purpose="hero-section"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          <div class="flex flex-col gap-8">
+            <!-- Copy Column -->
+            <div class="flex flex-col items-start max-w-2xl">
+              <!-- 21+ Micro Badge -->
+              <div
+                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-red/10 border border-brand-red/30 text-brand-red text-xs font-bold tracking-wider uppercase mb-4"
+              >
+                <span
+                  class="w-2 h-2 rounded-full bg-brand-red animate-ping"
+                ></span>
+                Adults 21+ Gourmet Innovation
+              </div>
+              <!-- Hero Headline -->
+              <h1
+                class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-brand-noir tracking-tight leading-[1.08] mb-4"
+              >
+                IC-80, Imagineering Cuisines — <br class="hidden sm:inline" />
+                <span
+                  class="italic text-transparent bg-clip-text bg-gradient-to-r from-brand-charcoal to-brand-red"
+                  >We <span class="font-italic">twisted</span> all the rules!!</span
+                >
+              </h1>
+              <!-- Subtitle -->
+              <p
+                class="text-base sm:text-lg text-brand-noir/80 leading-relaxed font-normal mb-6"
+              >
+                IC-80 is a revolutionary new formulation of true 80-proof
+                alcoholic ice cream. Alongside our frozen creations, we engineer
+                high-end bespoke culinary menus crafted to stun your most
+                discerning guests.
+              </p>
+              <!-- Dual CTA Action Group -->
+              <div
+                class="w-full flex flex-col sm:flex-row items-stretch sm:items-center gap-3"
+              >
+                <a
+                  class="flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-brand-red text-white text-base font-bold shadow-md shadow-brand-red/20 hover:bg-orange-600 active:scale-95 transition-all text-center"
+                  href="#order"
+                >
+                  <span>Order Today</span>
+                  <svg
+                    class="w-4 h-4 stroke-[2.5]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewbox="0 0 24 24"
+                  >
+                    <path
+                      d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  class="flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white text-brand-noir border border-brand-noir/15 text-base font-semibold shadow-sm hover:bg-stone-50 active:scale-95 transition-all text-center"
+                  href="catering.html"
+                >
+                  <svg
+                    class="w-4 h-4 text-brand-muted"
+                    fill="none"
+                    stroke="currentColor"
+                    viewbox="0 0 24 24"
+                  >
+                    <path
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                    ></path>
+                  </svg>
+                  <span>Schedule An Event</span>
+                </a>
+              </div>
+            </div>
+            <!-- Hero Image Coupe Feature Frame -->
+            <div
+              class="relative w-full rounded-3xl overflow-hidden shadow-2xl border border-stone-200/80 bg-brand-charcoal group"
+              data-purpose="hero-imagery"
+            >
+              <div class="aspect-[4/3] w-full relative">
+                <img
+                  alt="Cinematic culinary close-up of artisanal gourmet alcoholic ice cream quenelle served in a chilled crystal coupe glass, infused with bourbon and smoked vanilla bean, topped with gold leaf flake, delicate orange citrus zest swirl, dark moody atmospheric lighting with warm glow, high-end Michelin restaurant luxury aesthetic."
+                  class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                  loading="eager"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZmzcDsOYvGEZPErUmWwjHDB-1C83KFUBbZxze7PK6BRwpEQXxL25IPhXs2VzVzJqhpa5780Dk0WesBZ5y-zVSaLGf-xAQRA-RXv57UFtS4cIwIIpBmlwKCDm7TWV7bvUME6U81JooOjfggNT7eHWVSe99aQRSY9wYEXP8zMWN-ZX2rGn5fEKtWptlFVJRtzi858_l8SlF6DS3AYxvbczq9RY5dpxJoXy3-kp68B8"
+                />
+                <!-- Ambient Gradient Overlay -->
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-brand-noir/90 via-transparent to-black/20"
+                ></div>
+                <!-- Overlaid Product Callout -->
+                <div
+                  class="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 flex justify-between items-end"
+                >
+                  <div
+                    class="bg-brand-noir/70 backdrop-blur-md p-3.5 rounded-2xl border border-white/10 max-w-xs"
+                  >
+                    <span
+                      class="text-xs uppercase tracking-widest text-brand-skyLight font-semibold block"
+                      >Signature Release</span
+                    >
+                    <p
+                      class="text-white text-sm sm:text-base font-bold font-heading"
+                    >
+                      Aged Bourbon &amp; Smoked Vanilla Quenelle
+                    </p>
+                    <p class="text-xs text-stone-300">
+                      Infused with 80° Proof Distillate • Real Gold Leaf
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-end">
+                    <span
+                      class="px-3 py-1 rounded-full bg-brand-red text-white text-[11px] font-extrabold uppercase tracking-widest shadow-md"
+                    >
+                      21+ Only
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Trust Badges Bar -->
+            <div
+              class="w-full grid grid-cols-3 gap-2 py-3 px-2 sm:px-4 bg-white/70 rounded-2xl border border-brand-noir/5 text-center text-xs font-semibold text-brand-charcoal"
+              data-purpose="trust-badges"
+            >
+              <div class="flex items-center justify-center gap-1.5 p-1">
+                <span class="text-emerald-600 font-bold">✓</span>
+                <span>Licensed &amp; Insured</span>
+              </div>
+              <div
+                class="flex items-center justify-center gap-1.5 p-1 border-x border-stone-200"
+              >
+                <span class="text-brand-sky font-bold">❄</span>
+                <span>Emergency Logistics</span>
+              </div>
+              <div class="flex items-center justify-center gap-1.5 p-1">
+                <span class="text-brand-red font-bold">★</span>
+                <span>Quality Guaranteed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END: HeroSection -->
+      <!-- BEGIN: StatsSection -->
+      <section
+        class="py-8 bg-brand-creamLight border-y border-brand-noir/5"
+        data-purpose="stats-section"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+            <!-- Stat 1 -->
+            <div
+              class="bg-white rounded-2xl p-4 sm:p-5 border border-brand-noir/5 shadow-sm"
+            >
+              <span
+                class="block text-3xl sm:text-4xl font-extrabold font-heading text-brand-noir tracking-tight"
+                >15+</span
+              >
+              <span
+                class="text-xs sm:text-sm text-brand-muted font-medium mt-1 block"
+                >Years Culinary Mastery</span
+              >
+            </div>
+            <!-- Stat 3 -->
+            <div
+              class="bg-white rounded-2xl p-4 sm:p-5 border border-brand-noir/5 shadow-sm"
+            >
+              <span
+                class="block text-3xl sm:text-4xl font-extrabold font-heading text-brand-noir tracking-tight"
+                >100%</span
+              >
+              <span
+                class="text-xs sm:text-sm text-brand-muted font-medium mt-1 block"
+                >Flavor Guarantee</span
+              >
+            </div>
+            <!-- Stat 4 -->
+            <div
+              class="bg-white rounded-2xl p-4 sm:p-5 border border-brand-noir/5 shadow-sm"
+            >
+              <span
+                class="block text-3xl sm:text-4xl font-extrabold font-heading text-brand-sky tracking-tight"
+                >80°</span
+              >
+              <span
+                class="text-xs sm:text-sm text-brand-muted font-medium mt-1 block"
+                >Proof Craft Integrity</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END: StatsSection -->
+
+      <!-- BEGIN: FeatureDifferentiator -->
+      <section
+        class="py-14 sm:py-20 bg-brand-noir text-white relative overflow-hidden"
+        data-purpose="differentiator-section"
+        id="formula"
+      >
+        <!-- Glow ambient gradient background -->
+        <div
+          class="absolute -top-24 -right-24 w-96 h-96 bg-brand-red/15 rounded-full blur-3xl pointer-events-none"
+        ></div>
+        <div
+          class="absolute -bottom-24 -left-24 w-96 h-96 bg-brand-sky/15 rounded-full blur-3xl pointer-events-none"
+        ></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+          <div class="max-w-3xl mb-12">
+            <span
+              class="text-brand-red text-xs font-bold uppercase tracking-widest block mb-2"
+              >Patent-Pending Formulation</span
+            >
+            <h2
+              class="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading tracking-tight leading-tight"
+            >
+              IC-80 Ice Cream is a new invention only we offer!
+            </h2>
+            <p class="text-stone-300 text-base sm:text-lg mt-4 leading-relaxed">
+              Standard alcohol lowers freezing points to slushes and syrups.
+              IC-80 solves this via a breakthrough sub-zero cryo-emulsion
+              process that preserves full 80-proof spirit aromatics while
+              maintaining dense, quenelle-sculptable silkiness.
+            </p>
+          </div>
+          <!-- 3 Pillars Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            <!-- Pillar 1 -->
+            <div
+              class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm"
+            >
+              <div
+                class="w-10 h-10 rounded-xl bg-brand-red/20 text-brand-red flex items-center justify-center font-extrabold text-xl font-heading mb-4"
+              >
+                01
+              </div>
+              <h3 class="text-lg font-bold font-heading text-white">
+                Zero Melting Instability
+              </h3>
+              <p class="text-stone-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                Maintains micro-crystalline structure at banquet service
+                temperatures up to 25 minutes longer than traditional gelato.
+              </p>
+            </div>
+            <!-- Pillar 2 -->
+            <div
+              class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm"
+            >
+              <div
+                class="w-10 h-10 rounded-xl bg-brand-sky/20 text-brand-skyLight flex items-center justify-center font-extrabold text-xl font-heading mb-4"
+              >
+                02
+              </div>
+              <h3 class="text-lg font-bold font-heading text-white">
+                True Spirit Integrity
+              </h3>
+              <p class="text-stone-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                We never cook off the alcohol. Bourbon, mezcal, spiced rum, and
+                botanicals keep their distinct top-shelf notes intact.
+              </p>
+            </div>
+            <!-- Pillar 3 -->
+            <div
+              class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm"
+            >
+              <div
+                class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-extrabold text-xl font-heading mb-4"
+              >
+                03
+              </div>
+              <h3 class="text-lg font-bold font-heading text-white">
+                21+ Verified Formulation
+              </h3>
+              <p class="text-stone-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                Rigorous laboratory batch certification ensuring reliable ABV
+                dosing that complements fine dining wine pairings seamlessly.
+              </p>
+            </div>
+          </div>
+          <!-- Feature CTA Button -->
+          <div class="flex flex-col sm:flex-row items-center gap-4">
+            <a
+              class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-brand-red text-white font-bold text-sm tracking-wide shadow-lg hover:bg-orange-600 transition-all text-center"
+              href="#order"
+            >
+              Order Here
+            </a>
+            <span class="text-xs text-stone-400"
+              >Available in individual artisanal coupers or full event
+              batches.</span
+            >
+          </div>
+        </div>
+      </section>
+      <!-- END: FeatureDifferentiator -->
+      <!-- BEGIN: WhyChooseUs -->
+      <section
+        class="py-14 sm:py-20"
+        data-purpose="why-choose-section"
+        id="why-choose"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <!-- Dish Photography Column -->
+            <div class="lg:col-span-5 order-2 lg:order-1">
+              <div
+                class="relative rounded-3xl overflow-hidden border border-stone-200 shadow-xl bg-white"
+              >
+                <img
+                  alt="High-end bespoke gourmet catering dish: seared scallops with saffron emulsion, microgreens, vibrant orange carrot puree swirl on handmade artisan ceramic plate, luxury banquet dining setting, shallow depth of field."
+                  class="w-full h-full object-cover aspect-[4/3]"
+                  loading="lazy"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkTFxmV2lAp3DSqiSCRVaNotYct4zb1OO0E29INyRaO87em6ZnjRFRzSVTnKrouB4WeozYjXtrMBi3cCMPHXT6NMQBugdL1sB3oSca0oXriu2hATXWtVbQxOZD2o1L6RDVuGex_Y6wEddGM85YOUakbFYwNJ0QfWOJ0QaXIFwo5HfkcqodWmuWHN8dLflufZ2cboy-euohFHjiRusF_oZyniPsOHJEK4-hH6qlo5U"
+                />
+                <div
+                  class="p-4 bg-white/95 border-t border-stone-100 flex items-center justify-between"
+                >
+                  <div>
+                    <p
+                      class="text-xs font-bold uppercase tracking-wider text-brand-red"
+                    >
+                      Bespoke Course Four
+                    </p>
+                    <p
+                      class="text-sm font-semibold text-brand-noir font-heading"
+                    >
+                      Pan-Seared Diver Scallop &amp; Carrot Emulsion
+                    </p>
+                  </div>
+                  <span
+                    class="text-[10px] font-bold uppercase px-2.5 py-1 rounded bg-stone-100 text-brand-charcoal"
+                    >Michelin Prep</span
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Value Points Column -->
+            <div class="lg:col-span-7 order-1 lg:order-2">
+              <p
+                class="text-xs font-bold text-brand-red uppercase tracking-wider mb-2"
+              >
+                Uncompromising Standard
+              </p>
+              <h2
+                class="text-2xl sm:text-3xl md:text-4xl font-extrabold font-heading text-brand-noir tracking-tight mb-4"
+              >
+                Why Premier Hosts Choose The IC-80 Culinary Group
+              </h2>
+              <p class="text-sm sm:text-base text-brand-muted mb-8">
+                From high-society weddings to boardroom dinner summits, we
+                ensure our food, alcoholic desserts, and front-of-house
+                hospitality exceed hospitality benchmarks.
+              </p>
+              <!-- 6 Value Points Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div
+                  class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-stone-200/70"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center text-xs font-bold mt-0.5"
+                  >
+                    ✓
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-bold text-brand-noir font-heading">
+                      Experienced Professionals
+                    </h3>
+                    <p class="text-xs text-brand-muted mt-0.5">
+                      Trained by Michelin alumni with decades of luxury banquet
+                      precision.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-stone-200/70"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center text-xs font-bold mt-0.5"
+                  >
+                    ✓
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-bold text-brand-noir font-heading">
+                      Transparent Pricing
+                    </h3>
+                    <p class="text-xs text-brand-muted mt-0.5">
+                      No hidden logistics line items. All inclusive quotes
+                      provided upfront.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-stone-200/70"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center text-xs font-bold mt-0.5"
+                  >
+                    ✓
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-bold text-brand-noir font-heading">
+                      Quality Workmanship
+                    </h3>
+                    <p class="text-xs text-brand-muted mt-0.5">
+                      Hand-turned ice quenelles, fresh herbs, and artisan
+                      ceramic presentation.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-stone-200/70"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center text-xs font-bold mt-0.5"
+                  >
+                    ✓
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-bold text-brand-noir font-heading">
+                      Fully Licensed &amp; Certified
+                    </h3>
+                    <p class="text-xs text-brand-muted mt-0.5">
+                      Compliant liquor catering permits and food handling
+                      insurances.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-stone-200/70"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center text-xs font-bold mt-0.5"
+                  >
+                    ✓
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-bold text-brand-noir font-heading">
+                      Reliable Turnaround
+                    </h3>
+                    <p class="text-xs text-brand-muted mt-0.5">
+                      Dedicated temperature-controlled cold chain logistics for
+                      every order.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-stone-200/70"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center text-xs font-bold mt-0.5"
+                  >
+                    ✓
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-bold text-brand-noir font-heading">
+                      Tailored Service
+                    </h3>
+                    <p class="text-xs text-brand-muted mt-0.5">
+                      Custom flavor formulations matched to your bride/groom
+                      drink tastes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END: WhyChooseUs -->
+      
+    
+      <!-- BEGIN: FinalConversionCTA -->
+      <section
+        class="py-14 sm:py-20 bg-brand-charcoal text-white relative"
+        data-purpose="final-conversion-section"
+        id="order"
+      >
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+          <div
+            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-red/20 border border-brand-red/30 text-brand-red text-xs font-bold tracking-wider uppercase mb-5"
+          >
+            National &amp; Regional Rollout (21+)
+          </div>
+          <h2
+            class="flex items-center justify-center gap-0 text-3xl sm:text-5xl font-extrabold font-heading tracking-tight leading-tight mb-4"
+          >
+            <span>We're Taking IC-80 Everywhere!</span>
+            <img src="./assets/unnamed.jpg"
+             class="logo shrink-0" alt="IC-80 Logo">
+          </h2>
+          <p
+            class="text-base sm:text-lg text-stone-300 max-w-2xl mx-auto mb-8 font-normal"
+          >
+            Don't let your restaurant or event be the only one without it! (21+)
+            Order boutique direct delivery or book our master catering culinary
+            team today.
+          </p>
+          <!-- Dual CTA Form & Concierge Contact -->
+          <div
+            class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto"
+          >
+            <a
+              class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full bg-brand-red text-white text-base font-bold shadow-lg hover:bg-orange-600 active:scale-95 transition-all"
+              href="#order"
+            >
+              Order Online
+              <svg
+                class="w-4 h-4 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewbox="0 0 24 24"
+              >
+                <path
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2.5"
+                ></path>
+              </svg>
+            </a>
+            <a
+              class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 text-white text-base font-bold border border-white/20 active:scale-95 transition-all"
+              href="#contact"
+            >
+              Contact Us
+            </a>
+          </div>
+          <div
+            class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-xs text-stone-400"
+          >
+            <span class="flex items-center gap-2">
+              <svg
+                class="w-4 h-4 text-brand-red"
+                fill="currentColor"
+                viewbox="0 0 20 20"
+              >
+                <path
+                  d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"
+                ></path>
+              </svg>
+              Concierge Direct: (800) 428-0800
+            </span>
+            <span class="hidden sm:inline">•</span>
+            <span>Dry-Ice Overnight Nationwide Shipping Available</span>
+          </div>
+        </div>
+      </section>
+      <!-- END: FinalConversionCTA -->
+    </main>
+    <!-- BEGIN: Footer -->
+    <footer
+      class="bg-brand-noir text-stone-300 pt-14 pb-8 border-t border-white/10"
+      data-purpose="primary-footer"
+      id="contact"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <!-- Top Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
+          <!-- Brand Narrative Column -->
+          <div class="col-span-2">
+            <div class="flex items-center gap-1 mb-4">
+              <span
+                class="text-2xl font-black tracking-tight text-white font-heading"
+                >IC</span
+              >
+              <span
+                class="text-2xl font-black tracking-tight text-brand-red font-heading"
+                >-80</span
+              >
+              <span
+                class="ml-2 text-[10px] tracking-widest font-semibold uppercase px-2 py-0.5 rounded bg-white/10 text-stone-200"
+                >Atelier</span
+              >
+            </div>
+            <p class="text-xs text-stone-400 leading-relaxed max-w-sm">
+              IC-80 is the creator of true 80-proof alcoholic ice cream and
+              high-end bespoke catering. Innovated with cryo-emulsion culinary
+              science, crafted for discerning celebrations.
+            </p>
+            <div class="mt-4 text-xs font-semibold text-brand-red">
+              Must be 21+ to purchase or consume IC-80 alcoholic products.
+            </div>
+          </div>
+          <!-- Navigation Columns -->
+          <div>
+            <h4
+              class="text-xs font-bold uppercase tracking-wider text-white mb-3 font-heading"
+            >
+              Navigation
+            </h4>
+            <ul class="space-y-2 text-xs">
+              <li>
+                <a class="hover:text-brand-red transition-colors" href="#"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-brand-red transition-colors"
+                  href="#offerings"
+                  >Menu Catalog</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-brand-red transition-colors"
+                  href="#offerings"
+                  >Event Services</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-brand-red transition-colors"
+                  href="#formula"
+                  >IC-80 Formula Recipe</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="text-xs font-bold uppercase tracking-wider text-white mb-3 font-heading"
+            >
+              Company
+            </h4>
+            <ul class="space-y-2 text-xs">
+              <li>
+                <a
+                  class="hover:text-brand-red transition-colors"
+                  href="#why-choose"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-brand-red transition-colors"
+                  href="#portfolio"
+                  >Past Projects</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-brand-red transition-colors" href="#order"
+                  >Wholesale Program</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-brand-red transition-colors"
+                  href="#contact"
+                  >Cryo Delivery FAQ</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="text-xs font-bold uppercase tracking-wider text-white mb-3 font-heading"
+            >
+              Contact Atelier
+            </h4>
+            <ul class="space-y-2 text-xs text-stone-400">
+              <li class="text-white font-medium">orders@ic80-atelier.com</li>
+              <li>1 (800) 428-0800</li>
+              <li>Manhattan • Hamptons • Miami</li>
+              <li class="pt-2 flex gap-3 text-stone-400">
+                <span class="hover:text-white cursor-pointer font-bold"
+                  >IG</span
+                >
+                <span class="hover:text-white cursor-pointer font-bold"
+                  >LN</span
+                >
+                <span class="hover:text-white cursor-pointer font-bold"
+                  >FB</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Bottom Bar -->
+        <div
+          class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-[11px] text-stone-500 gap-4"
+        >
+          <p>
+            © 2025 IC-80 Artisanal Atelier LLC. All rights reserved. Please
+            drink responsibly. 21+ Only.
+          </p>
+          <div class="flex items-center gap-4">
+            <a class="hover:text-stone-300" href="#">Privacy Policy</a>
+            <a class="hover:text-stone-300" href="#">Terms of Service</a>
+            <a class="hover:text-stone-300" href="#">Liquor Compliance</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- END: Footer -->
+    <!-- JavaScript for Navigation Interactivity -->
+    <script src="./script.js" defer></script>
+  </body>
+</html>
