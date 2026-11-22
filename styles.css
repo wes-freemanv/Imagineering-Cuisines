@@ -1,0 +1,178 @@
+:root {
+  --brand-cream: #faf7f2;
+  --brand-cream-light: #fcf9f4;
+  --brand-noir: #181716;
+  --brand-charcoal: #262422;
+  --brand-red: #f12b2b;
+  --brand-sky: #0284c7;
+  --brand-sky-light: #38bdf8;
+  --brand-muted: #7a7672;
+  --max-content-width: 1280px;
+}
+
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.logo {
+  width: 112px;
+  height: 112px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Typography */
+body {
+  font-family:
+    "Plus Jakarta Sans",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial;
+  background: var(--brand-cream);
+  color: var(--brand-noir);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: Syne, "Plus Jakarta Sans", sans-serif;
+}
+
+/* Utility containers */
+.site-container {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+header[data-purpose="primary-header"] {
+  backdrop-filter: blur(10px);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.4)
+  );
+}
+
+/* Buttons (complement Tailwind classes) */
+.btn-primary {
+  background: var(--brand-red);
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 9999px;
+  border: none;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.btn-primary:hover {
+  filter: brightness(0.98);
+}
+.btn-ghost {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 0.6rem 1rem;
+  border-radius: 9999px;
+}
+
+/* Cards */
+.card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(34, 34, 34, 0.06);
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* Hero image overlay helper */
+.hero-figure {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+}
+.hero-figure .overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(24, 23, 22, 0.7),
+    rgba(0, 0, 0, 0.15)
+  );
+}
+
+/* Trust badges grid fallback spacing for non-Tailwind environments */
+[data-purpose="trust-badges"] {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+/* Responsive typography tweaks */
+@media (min-width: 640px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+}
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3.8rem;
+  }
+}
+
+/* Accessibility focus outlines */
+:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+:focus-visible {
+  outline: 3px solid var(--brand-sky-light);
+}
+
+/* Small helpers */
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+.shadow-soft {
+  box-shadow: 0 10px 30px rgba(2, 132, 199, 0.06);
+}
+.uppercase {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Footer tweaks */
+footer[data-purpose="primary-footer"] a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Ensure interactive images animate smoothly */
+.group img,
+img {
+  transition: transform 0.45s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+/* Mobile nav exposed class (script toggles) */
+#mobile-nav-menu.open {
+  display: flex !important;
+}

@@ -1,0 +1,467 @@
+<!doctype html>
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport" />
+    <title>BUENA'DILLAS | Fresh &amp; Creative Globally Inspired Quesadillas</title>
+    <!-- Google Fonts: Syne & Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Syne:wght@600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS v3 with Plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                cream: "#FAF7F2",
+                creamLight: "#FCF9F4",
+                noir: "#181716",
+                charcoal: "#262422",
+                purple: "#60219f",
+                yellow: "#0284C7",
+                yellowLight: "#38BDF8",
+                muted: "#7A7672",
+                amber: "#E8891D",
+              },
+            },
+            fontFamily: {
+              syne: ["Syne", "sans-serif"],
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :root {
+        --brand-cream: #FAF7F2;
+        --brand-cream-light: #FCF9F4;
+        --brand-noir: #181716;
+        --brand-charcoal: #262422;
+        --brand-purple: #60219f;
+        --brand-yellow: #E8891D;
+        --brand-muted: #7A7672;
+      }
+      body {
+        font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+        background-color: var(--brand-cream);
+        color: var(--brand-noir);
+        -webkit-font-smoothing: antialiased;
+      }
+      h1, h2, h3, h4, .font-heading {
+        font-family: "Syne", "Plus Jakarta Sans", sans-serif;
+      }
+      .frost-glass {
+        background: rgba(250, 247, 242, 0.9);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+      }
+      .grid-pattern {
+        background-image: radial-gradient(rgba(24, 23, 22, 0.06) 1px, transparent 1px);
+        background-size: 24px 24px;
+      }
+      .cheese-drip {
+        position: relative;
+      }
+      .cheese-drip::after {
+        content: '';
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, #60219f, #E8891D, #60219f);
+        border-radius: 9999px;
+      }
+    </style>
+  </head>
+  <body class="bg-brand-cream text-brand-noir min-h-screen flex flex-col selection:bg-brand-purple selection:text-white">
+    <!-- Sticky Navigation Header -->
+    <header class="sticky top-0 z-50 frost-glass border-b border-brand-noir/5 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 h-18 sm:h-20 flex items-center justify-between">
+        <!-- Brand Wordmark -->
+          <div class="flex items-center gap-2">
+            <img src="./assets/Buena'Dillas.jpg" alt="Buena'Dillas Logo" class="w-75 h-24 object-cover border border-brand-noir/10 shadow-sm">
+          </div>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-semibold">
+          <a href="#signature-creations" class="hover:text-brand-purple transition-colors">  Signature Dillas</a>
+          <a href="Menu.html" class="hover:text-brand-purple transition-colors">Curated Menu</a>
+          <a href="#culinary-craft" class="hover:text-brand-purple transition-colors">The Craft</a>
+          <a href="Menu.html#beverages" class="hover:text-brand-purple transition-colors">Bespoke Drinks</a>
+          <a href="catering.html" class="hover:text-brand-purple transition-colors">Private Events</a>
+        </nav>
+
+        <!-- CTA & Action Buttons -->
+        <div class="flex items-center gap-3">
+          <a href="#reserve" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-brand-purple text-white text-xs sm:text-sm font-bold tracking-wide shadow-sm hover:bg-brand-purple/90 active:scale-95 transition-all">
+            <span>Order Direct &amp; Catering</span>
+            <svg class="w-3.5 h-3.5 ml-1.5 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+          <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2.5 rounded-full bg-white border border-brand-charcoal/10 text-xs sm:text-sm font-bold text-brand-charcoal hover:bg-stone-50 transition-all">
+            Inquire
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-grow">
+      <!-- HERO SECTION: Asymmetric Luxury Gastronomy -->
+      <section class="relative pt-8 pb-16 sm:pt-16 sm:pb-24 grid-pattern border-b border-brand-noir/5 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <!-- Left Narrative Column -->
+            <div class="lg:col-span-6 flex flex-col items-start">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-purple/10 border border-brand-purple/25 text-brand-purple text-xs font-bold tracking-widest uppercase mb-5">
+                <span class="w-2 h-2 rounded-full bg-brand-purple animate-pulse"></span>
+                Fresh &amp; Creative Gastronomy
+              </div>
+
+              <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black font-heading text-brand-noir tracking-tight leading-[1.08] mb-5">
+                Globally Inspired <br />
+                <span class="italic text-transparent bg-clip-text bg-gradient-to-r from-brand-charcoal via-brand-purple to-amber-600">
+                  Quesadillas.
+                </span>
+              </h1>
+
+              <p class="text-base sm:text-lg text-brand-noir/80 leading-relaxed font-normal mb-8 max-w-xl">
+                Breaking traditional boundaries with multi-regional fusion, 21-ingredient simmered marinades, artisan Oaxaca melt-profiles, and slow-braised specialty proteins. Crafted fresh to order for private service, galas, and discerning food lovers.
+              </p>
+
+              <!-- Dual CTAs -->
+              <div class="w-full flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 mb-10">
+                <a href="#signature-creations" class="flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-brand-purple text-white text-base font-bold shadow-md shadow-brand-purple/20 hover:bg-orange-600 active:scale-95 transition-all text-center">
+                  <span>Explore Menu Offerings</span>
+                  <svg class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </a>
+                <a href="catering.html" class="flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-white text-brand-noir border border-brand-noir/15 text-base font-semibold shadow-sm hover:bg-stone-50 active:scale-95 transition-all text-center">
+                  <span>Book Atelier Catering</span>
+                </a>
+              </div>
+
+              <!-- Quick Trust Indicators -->
+              <div class="grid grid-cols-3 gap-3 w-full border-t border-brand-noir/10 pt-6">
+                <div>
+                  <span class="block text-xl sm:text-2xl font-black font-heading text-brand-noir">100%</span>
+                  <span class="text-xs text-brand-muted font-medium">Fresh House Made</span>
+                </div>
+                <div>
+                  <span class="block text-xl sm:text-2xl font-black font-heading text-brand-purple">21</span>
+                  <span class="text-xs text-brand-muted font-medium">Ingredient Secret Sauces</span>
+                </div>
+                <div>
+                  <span class="block text-xl sm:text-2xl font-black font-heading text-brand-yellow">Zero</span>
+                  <span class="text-xs text-brand-muted font-medium">Compromise on Melt</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Hero Imagery Feature -->
+            <div class="lg:col-span-6 relative">
+              <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-stone-200/80 bg-brand-charcoal group">
+                <div class="aspect-[16/9] w-full relative">
+                  <img
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmuffvoLsqM2OfGtrCJnWm6tDPYt3EJJIGCSNRBvyF7vdb6Q2rA8XuYqKVjtA6Kiw7OPmEkpf8dakMq8a3V_3GfKHzE9VYTsXwEhULGUWPqJxClHxhbpyGSRel_7Ze6cwW7z3rXXpDkUBUJzyXNJwSeiXjjLCFVSxXjCEgyB6Phq0lLVSn1_UxDZoUuCmXOU-nwdAhCEGK0FudzlbI5xbpix2fOwsXUrvn9dlV6FpS"
+                    alt="Artisanal globally inspired quesadillas with grilled crust, melted Oaxaca and cheddar cheese pull, accompanied by house-made salsas and fresh herbs"
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                    loading="eager"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-brand-noir/85 via-transparent to-black/20"></div>
+                  <!-- Floating Caption Card -->
+                  <div class="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 flex justify-between items-end">
+                    <div class="bg-brand-noir/80 backdrop-blur-md p-4 rounded-xl border border-white/10 max-w-sm">
+                      <span class="text-[11px] uppercase tracking-widest text-amber-400 font-bold block mb-1">Culinary Highlight</span>
+                      <p class="text-white text-base font-bold font-heading">The Crisped Golden Pull</p>
+                      <p class="text-xs text-stone-300 mt-1">Blend of Sharp Cheddar, Pepper Jack, Melted Oaxaca &amp; Secret Emulsions.</p>
+                    </div>
+                    <span class="px-3 py-1.5 rounded-full bg-brand-purple text-white text-[11px] font-black uppercase tracking-wider shadow-md">
+                      Chef Mastered
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SIGNATURE SPOTLIGHT: BBQ Ducka'dilla & Banh Mia'dilla -->
+      <section id="signature-creations" class="py-16 sm:py-24 bg-white border-b border-brand-noir/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div>
+              <span class="text-xs font-bold text-brand-purple uppercase tracking-widest block mb-2">The Headliners</span>
+              <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-heading text-brand-noir tracking-tight">
+                Signature Masterpieces
+              </h2>
+            </div>
+            <p class="text-sm sm:text-base text-brand-muted max-w-md">
+              Each recipe represents months of flavor engineering—marrying classic griddled perfection with international heritage culinary profiles.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Feature 1: BBQ DUCKA'DILLA -->
+            <div class="bg-brand-creamLight rounded-2xl border border-stone-200/80 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+              <div class="relative aspect-[4/3] w-full overflow-hidden bg-brand-charcoal">
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeeGE7fCoaQW_Y2W6Y5S-n2rwlAXTZqpiEfmicpc6JRnBeSJrVQ3nbNcjin9gsqZCj5t88VtobWMcM1KVr8K6QUoUuxiPAbj2CixlIDPd9uCnGTtnjc9DCO18plXPq6nOCu17rgsvqMawB0RQt92Y_BRpET2GIz13iEKSGPZNjCCWB1p6walbFrAVXyub73IgYKb_2LPfCpCVxSZxkeHNJ7uLlU1EDNFDUNKcrXCAh"
+                  alt="BBQ Ducka'dilla with braised duck, sharp cheddar, scallions, and 21 ingredient BBQ glaze"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div class="absolute top-4 left-4 bg-brand-purple text-white text-xs font-extrabold uppercase px-3 py-1 rounded-full shadow">
+                  House Flagship
+                </div>
+                <div class="absolute bottom-4 right-4 bg-brand-noir/80 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-md font-semibold">
+                  21-Ingredient BBQ
+                </div>
+              </div>
+              <div class="p-6 sm:p-8 flex flex-col justify-between flex-grow">
+                <div>
+                  <div class="flex items-center justify-between mb-2">
+                    <h3 class="text-2xl font-bold font-heading text-brand-noir">BBQ DUCKA'DILLA</h3>
+                    <span class="text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-100/70 px-2.5 py-1 rounded">Chef's Choice</span>
+                  </div>
+                  <p class="text-sm font-medium text-brand-purple mb-3">Tender Braised Duck • Aged Cheddar Cheese • Crisp Scallions</p>
+                  <p class="text-sm text-brand-muted leading-relaxed mb-6">
+                    Our celebrated centerpiece. Slow-braised succulent duck layered with melting sharp cheddar, sliced fresh garden scallions, and drenched in our proprietary 21-ingredient artisanal barbecue glaze cooked down over cherrywood chips.
+                  </p>
+                  <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="text-[11px] font-semibold bg-white border border-stone-200 px-2.5 py-1 rounded-full text-brand-charcoal">Slow-Braised Duck</span>
+                    <span class="text-[11px] font-semibold bg-white border border-stone-200 px-2.5 py-1 rounded-full text-brand-charcoal">Sharp Cheddar</span>
+                    <span class="text-[11px] font-semibold bg-white border border-stone-200 px-2.5 py-1 rounded-full text-brand-charcoal">Scallion Crunch</span>
+                    <span class="text-[11px] font-semibold bg-white border border-stone-200 px-2.5 py-1 rounded-full text-brand-charcoal">Hand Griddled</span>
+                  </div>
+                </div>
+                <a href="#reserve" class="inline-flex items-center justify-between w-full pt-4 border-t border-stone-200 text-sm font-bold text-brand-noir hover:text-brand-purple transition-colors">
+                  <span>Order for Your Event</span>
+                  <span class="text-brand-purple text-lg">→</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Feature 2: THAI CHICKEN BANH MIA'DILLA -->
+            <div class="bg-brand-creamLight rounded-2xl border border-stone-200/80 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+              <div class="relative aspect-[4/3] w-full overflow-hidden bg-brand-charcoal">
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmuffvoLsqM2OfGtrCJnWm6tDPYt3EJJIGCSNRBvyF7vdb6Q2rA8XuYqKVjtA6Kiw7OPmEkpf8dakMq8a3V_3GfKHzE9VYTsXwEhULGUWPqJxClHxhbpyGSRel_7Ze6cwW7z3rXXpDkUBUJzyXNJwSeiXjjLCFVSxXjCEgyB6Phq0lLVSn1_UxDZoUuCmXOU-nwdAhCEGK0FudzlbI5xbpix2fOwsXUrvn9dlV6FpS"
+                  alt="Thai Chicken Banh Mia'dilla with fresh pickled daikon, cilantro, pepper jack, and sweet chili garlic glaze"
+                  class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div class="absolute top-4 left-4 bg-brand-yellow text-white text-xs font-extrabold uppercase px-3 py-1 rounded-full shadow">
+                  Saigon &amp; Bangkok Fusion
+                </div>
+                <div class="absolute bottom-4 right-4 bg-brand-noir/80 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-md font-semibold">
+                  House Pickled Daikon
+                </div>
+              </div>
+              <div class="p-6 sm:p-8 flex flex-col justify-between flex-grow">
+                <div>
+                  <div class="flex items-center justify-between mb-2">
+                    <h3 class="text-2xl font-bold font-heading text-brand-noir">THAI CHICKEN BANH MIA'DILLA</h3>
+                    <span class="text-xs font-bold uppercase tracking-wider text-emerald-800 bg-emerald-100/70 px-2.5 py-1 rounded">Savory &amp; Tangy</span>
+                  </div>
+                  <p class="text-sm font-medium text-brand-purple mb-3">Marinated Chicken Breast • Pickled Daikon • Fresh Cilantro • Sweet Chili Garlic</p>
+                  <p class="text-sm text-brand-muted leading-relaxed mb-6">
+                    A vibrant Southeast Asian homage. Charred lemongrass chicken laced with house-pickled crisp daikon radish, fresh cilantro leaves, melted dual Cheddar and spicy Pepper Jack cheeses, finished with a signature Sweet Chili Garlic glaze.
+                  </p>
+                  <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="text-[11px] font-semibold bg-white border border-stone-200 px-2.5 py-1 rounded-full text-brand-charcoal">Thai Herb Marinade</span>
+                    <span class="text-[11px] font-semibold bg-white border border-stone-200 px-2.5 py-1 rounded-full text-brand-charcoal">Dual Cheeses</span>
+                    <span class="text-[11px] font-semibold bg-white border border-stone-200 px-2.5 py-1 rounded-full text-brand-charcoal">Sweet Chili Garlic</span>
+                    <span class="text-[11px] font-semibold bg-white border border-stone-200 px-2.5 py-1 rounded-full text-brand-charcoal">Acid &amp; Heat Balance</span>
+                  </div>
+                </div>
+                <a href="#reserve" class="inline-flex items-center justify-between w-full pt-4 border-t border-stone-200 text-sm font-bold text-brand-noir hover:text-brand-purple transition-colors">
+                  <span>Order for Your Event</span>
+                  <span class="text-brand-purple text-lg">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- THE CULINARY CRAFT SECTION: 4 Pillars of BUENA'DILLAS -->
+      <section id="culinary-craft" class="py-16 sm:py-24 bg-brand-noir text-white relative overflow-hidden">
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-purple/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-amber-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+          <div class="max-w-3xl mb-12">
+            <span class="text-brand-purple text-xs font-bold uppercase tracking-widest block mb-2">Unmatched Standard</span>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading tracking-tight leading-tight">
+              Why BUENA'DILLAS Reshapes Gastronomy
+            </h2>
+            <p class="text-stone-300 text-base sm:text-lg mt-4 leading-relaxed">
+              We treat every quesadilla as a high-concept plated course. From our custom heat-pressed flour tortillas to multi-cheese tension elasticity, nothing is ordinary.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <!-- Pillar 1 -->
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
+              <div class="w-10 h-10 rounded-xl bg-brand-purple/20 text-brand-purple flex items-center justify-center font-extrabold text-xl font-heading mb-4">
+                01
+              </div>
+              <h3 class="text-lg font-bold font-heading text-white">The 21-Ingredient BBQ</h3>
+              <p class="text-stone-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                A top-secret glaze blending bourbon-reduced molasses, smoked habanero, toasted spices, and wild honey.
+              </p>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
+              <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center font-extrabold text-xl font-heading mb-4">
+                02
+              </div>
+              <h3 class="text-lg font-bold font-heading text-white">Quad-Blend Cheese Pull</h3>
+              <p class="text-stone-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                Precision ratio of Oaxaca, Halloumi, Sharp Cheddar, and Monterey Jack for optimal stretch without grease pooling.
+              </p>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
+              <div class="w-10 h-10 rounded-xl bg-brand-yellow/20 text-brand-yellowLight flex items-center justify-center font-extrabold text-xl font-heading mb-4">
+                03
+              </div>
+              <h3 class="text-lg font-bold font-heading text-white">House Ferments &amp; Slaws</h3>
+              <p class="text-stone-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                Crisp pickled daikon, pineapple relishes, and hand-squeezed lime slaws deliver high-acid vibrancy to every fold.
+              </p>
+            </div>
+
+            <!-- Pillar 4 -->
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-extrabold text-xl font-heading mb-4">
+                04
+              </div>
+              <h3 class="text-lg font-bold font-heading text-white">Banquet &amp; Street Ready</h3>
+              <p class="text-stone-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                Engineered for rapid live-griddle service at luxury festivals, corporate celebrations, and private estates.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- CONVERSION SECTION (FINAL CALL TO ACTION) -->
+      <section id="reserve" class="py-16 sm:py-24 bg-brand-charcoal text-white relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-purple/20 border border-brand-purple/30 text-brand-purple text-xs font-bold tracking-wider uppercase mb-5">
+            Freshly Griddled • Unrivaled Taste
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-extrabold font-heading tracking-tight leading-tight mb-4">
+            Taste the BUENA'DILLAS Revolution
+          </h2>
+          <p class="text-base sm:text-lg text-stone-300 max-w-2xl mx-auto mb-8 font-normal">
+            Whether ordering for immediate lunch service or designing an expansive bespoke wedding menu, experience quesadillas the way they were always meant to be made.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+            <a href="#signature-creations" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full bg-brand-purple text-white text-base font-bold shadow-lg hover:bg-orange-600 active:scale-95 transition-all">
+              <span>View Signature Dishes</span>
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+              </svg>
+            </a>
+            <a href="catering.html" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 text-white text-base font-bold border border-white/20 active:scale-95 transition-all">
+              Schedule Catering
+            </a>
+          </div>
+          <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-xs text-stone-400">
+            <span class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-brand-purple" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path>
+              </svg>
+              Direct Concierge: 1 (800) 428-0800
+            </span>
+            <span class="hidden sm:inline">•</span>
+            <span>Handmade To Order Daily</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER: Harmonized Atelier Footer -->
+    <footer class="bg-brand-noir text-stone-300 pt-14 pb-8 border-t border-white/10" id="contact">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
+          <!-- Brand Narrative Column -->
+          <div class="col-span-2">
+            <div class="flex items-center gap-1 mb-4">
+              <span class="text-2xl font-black tracking-tight text-white font-heading">BUENA'DILLAS</span>
+              <span class="text-2xl font-black tracking-tight text-brand-purple font-heading">!</span>
+              <span class="ml-2 text-[10px] tracking-widest font-semibold uppercase px-2 py-0.5 rounded bg-white/10 text-stone-200">Fresh &amp; Creative</span>
+            </div>
+            <p class="text-xs text-stone-400 leading-relaxed max-w-sm">
+              BUENA'DILLAS crafts globally inspired quesadillas utilizing multi-regional marinades, authentic cheeses, and slow-cooked specialty proteins. Partnered with the IC-80 culinary group.
+            </p>
+            <div class="mt-4 text-xs font-semibold text-brand-purple">
+              Freshly Made • Zero Pre-Packaged Fillings • Artisanal Quality
+            </div>
+          </div>
+
+          <!-- Navigation Columns -->
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-3 font-heading">Menu Lineup</h4>
+            <ul class="space-y-2 text-xs">
+              <li><a href="#signature-creations" class="hover:text-brand-purple transition-colors">BBQ Ducka'dilla</a></li>
+              <li><a href="#signature-creations" class="hover:text-brand-purple transition-colors">Thai Chicken Banh Mi</a></li>
+              <li><a href="Menu.html" class="hover:text-brand-purple transition-colors">Cheesesteaka'dilla</a></li>
+              <li><a href="Menu.html" class="hover:text-brand-purple transition-colors">Falafa'dilla (Veg)</a></li>
+              <li><a href="Menu.html" class="hover:text-brand-purple transition-colors">Spicy Shrimpa'dilla</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-3 font-heading">Experiences</h4>
+            <ul class="space-y-2 text-xs">
+              <li><a href="catering.html" class="hover:text-brand-purple transition-colors">Private Catering</a></li>
+              
+              <li><a href="Menu.html#beverages" class="hover:text-brand-purple transition-colors">Beverage Bar</a></li>
+              <li><a href="index.html" class="hover:text-brand-purple transition-colors">IC-80</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-3 font-heading">Contact Atelier</h4>
+            <ul class="space-y-2 text-xs text-stone-400">
+              <li class="text-white font-medium">catering@buenadillas.com</li>
+              <li>1 (800) 428-0800</li>
+              <li>Manhattan • Brooklyn • Hamptons</li>
+              <li class="pt-2 flex gap-3 text-stone-400">
+                <span class="hover:text-white cursor-pointer font-bold">IG</span>
+                <span class="hover:text-white cursor-pointer font-bold">LN</span>
+                <span class="hover:text-white cursor-pointer font-bold">FB</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-[11px] text-stone-500 gap-4">
+          <p>© 2025 BUENA'DILLAS Atelier. All rights reserved. Globally Inspired Quesadillas.</p>
+          <div class="flex items-center gap-4">
+            <a class="hover:text-stone-300" href="#">Privacy Policy</a>
+            <a class="hover:text-stone-300" href="#">Terms of Service</a>
+            <a class="hover:text-stone-300" href="#">Catering Standards</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

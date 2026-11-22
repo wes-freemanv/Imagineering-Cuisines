@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <!-- Tailwind CSS v3 with Plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                cream: "#FAF7F2",
+                creamLight: "#FCF9F4",
+                noir: "#181716",
+                charcoal: "#262422",
+                red: "#f12b2b",
+                sky: "#0284C7",
+                skyLight: "#38BDF8",
+                muted: "#7A7672",
+                amber: "#E8891D",
+              },
+            },
+            fontFamily: {
+              syne: ["Syne", "sans-serif"],
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :root {
+        --brand-cream: #FAF7F2;
+        --brand-cream-light: #FCF9F4;
+        --brand-noir: #181716;
+        --brand-charcoal: #262422;
+        --brand-red: #f12b2b;
+        --brand-sky: #0284C7;
+        --brand-muted: #7A7672;
+      }
+      body {
+        font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+        background-color: var(--brand-cream);
+        color: var(--brand-noir);
+        -webkit-font-smoothing: antialiased;
+      }
+      h1, h2, h3, h4, .font-heading {
+        font-family: "Syne", "Plus Jakarta Sans", sans-serif;
+      }
+      .frost-glass {
+        background: rgba(250, 247, 242, 0.9);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+      }
+      .grid-pattern {
+        background-image: radial-gradient(rgba(24, 23, 22, 0.06) 1px, transparent 1px);
+        background-size: 24px 24px;
+      }
+
+      .grid {
+        display: grid;
+
+        gap: 1.5rem;
+      }
+
+      .cheese-drip {
+        position: relative;
+      }
+      .cheese-drip::after {
+        content: '';
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, #f12b2b, #E8891D, #f12b2b);
+        border-radius: 9999px;
+      }
+    </style>
+</head>
+
+<body>
+  <!-- COMPLETE CURATED MENU CARDS (ALL ITEMS FROM DILLAS_MENU.JPG WITH NO PRICES) -->
+      <section id="global-lineup" class="py-16 sm:py-24 bg-brand-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          <div class="text-center max-w-2xl mx-auto mb-14">
+            <span class="text-xs font-bold text-brand-red uppercase tracking-widest block mb-2">Artisanal Flavor Directory</span>
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-brand-noir tracking-tight">
+              The Complete BUENA'DILLAS Lineup
+            </h2>
+            <p class="text-sm sm:text-base text-brand-muted mt-3">
+              Pure culinary innovation crafted with uncompromised ingredient integrity, premium melts, and house-blended sauces.
+            </p>
+          </div>
+
+          <!-- Menu Cards Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 w-full sm:w-3/4 mx-auto">
+
+            <!-- Card 1: BBQ DUCKA'DILLA -->
+            <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm hover:border-brand-red/40 hover:shadow-lg transition-all flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-red bg-brand-red/10 px-2.5 py-0.5 rounded">Specialty Duck</span>
+                  <span class="text-xs font-bold text-brand-muted">Crafted Fresh</span>
+                </div>
+                <h3 class="text-xl font-bold font-heading text-brand-noir mb-2">BBQ DUCKA'DILLA</h3>
+                <p class="text-xs font-semibold text-brand-charcoal/70 mb-3">Cheddar Cheese, Scallions, 21 Ingredient BBQ Sauce</p>
+                <p class="text-xs text-brand-muted leading-relaxed">
+                  Rich, slow-simmered duck confit paired with robust sharp cheddar, freshly chopped scallions, and our legendary multi-layered barbecue glaze.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between text-xs font-bold">
+                <span class="text-brand-charcoal">Signature Selection</span>
+                <a href="#reserve" class="text-brand-red hover:underline">Select Dish →</a>
+              </div>
+            </div>
+
+            <!-- Card 2: THAI CHICKEN BANH MIA'DILLA -->
+            <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm hover:border-brand-red/40 hover:shadow-lg transition-all flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-sky bg-brand-sky/10 px-2.5 py-0.5 rounded">Global Fusion</span>
+                  <span class="text-xs font-bold text-brand-muted">Crafted Fresh</span>
+                </div>
+                <h3 class="text-xl font-bold font-heading text-brand-noir mb-2">THAI CHICKEN BANH MIA'DILLA</h3>
+                <p class="text-xs font-semibold text-brand-charcoal/70 mb-3">Pickled Daikon, Cilantro, Cheddar &amp; Pepper Jack, Sweet Chili Garlic Sauce</p>
+                <p class="text-xs text-brand-muted leading-relaxed">
+                  Bright and savory crunch. Citrus-garlic marinated chicken breast, tart pickled garden daikon, fresh cilantro, double cheese blend, and sweet chili warmth.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between text-xs font-bold">
+                <span class="text-brand-charcoal">Signature Selection</span>
+                <a href="#reserve" class="text-brand-red hover:underline">Select Dish →</a>
+              </div>
+            </div>
+
+            <!-- Card 3: CHEESESTEAKA'DILLA -->
+            <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm hover:border-brand-red/40 hover:shadow-lg transition-all flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-[10px] font-extrabold uppercase tracking-wider text-amber-700 bg-amber-50 px-2.5 py-0.5 rounded">Philly Heritage</span>
+                  <span class="text-xs font-bold text-brand-muted">Crafted Fresh</span>
+                </div>
+                <h3 class="text-xl font-bold font-heading text-brand-noir mb-2">CHEESESTEAKA'DILLA</h3>
+                <p class="text-xs font-semibold text-brand-charcoal/70 mb-3">Peppers, Onions, American Cheese, Pico de Gallo, Sour Cream, Shoestring Fries</p>
+                <p class="text-xs text-brand-muted leading-relaxed">
+                  Finely shaved sirloin seared with bell peppers and caramelized onions, creamy American cheese melt, crispy shoestring potatoes tucked inside, served with house pico and crema.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between text-xs font-bold">
+                <span class="text-brand-charcoal">Signature Selection</span>
+                <a href="#reserve" class="text-brand-red hover:underline">Select Dish →</a>
+              </div>
+            </div>
+
+            <!-- Card 4: FALAFA'DILLA -->
+            <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm hover:border-brand-red/40 hover:shadow-lg transition-all flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-[10px] font-extrabold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded">Mediterranean Herb</span>
+                  <span class="text-xs font-bold text-brand-muted">Crafted Fresh</span>
+                </div>
+                <h3 class="text-xl font-bold font-heading text-brand-noir mb-2">FALAFA'DILLA</h3>
+                <p class="text-xs font-semibold text-brand-charcoal/70 mb-3">Homemade Falafel, Halloumi Cheese, Cheddar, Tzatziki, Pico de Gallo</p>
+                <p class="text-xs text-brand-muted leading-relaxed">
+                  Herbaceous golden chickpea falafel patties crushed tableside, griddled salty halloumi cheese, sharp cheddar melt, chilled house cucumber tzatziki, and zesty pico.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between text-xs font-bold">
+                <span class="text-brand-charcoal">Signature Selection</span>
+                <a href="#reserve" class="text-brand-red hover:underline">Select Dish →</a>
+              </div>
+            </div>
+
+            <!-- Card 5: BLACKENED CHICKA'DILLA -->
+            <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm hover:border-brand-red/40 hover:shadow-lg transition-all flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-[10px] font-extrabold uppercase tracking-wider text-purple-700 bg-purple-50 px-2.5 py-0.5 rounded">Cajun Spice</span>
+                  <span class="text-xs font-bold text-brand-muted">Crafted Fresh</span>
+                </div>
+                <h3 class="text-xl font-bold font-heading text-brand-noir mb-2">BLACKENED CHICKA'DILLA</h3>
+                <p class="text-xs font-semibold text-brand-charcoal/70 mb-3">Black Beans, Cheddar &amp; Pepper Jack, Pico de Gallo, Guacamole</p>
+                <p class="text-xs text-brand-muted leading-relaxed">
+                  Cast-iron blackened spiced chicken thighs, slow-simmered savory black beans, pepper jack sharpness, finished with whipped Hass avocado guacamole and fresh pico.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between text-xs font-bold">
+                <span class="text-brand-charcoal">Signature Selection</span>
+                <a href="#reserve" class="text-brand-red hover:underline">Select Dish →</a>
+              </div>
+            </div>
+
+            <!-- Card 6: SPICY SHRIMPA'DILLA -->
+            <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm hover:border-brand-red/40 hover:shadow-lg transition-all flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <span class="text-[10px] font-extrabold uppercase tracking-wider text-rose-700 bg-rose-50 px-2.5 py-0.5 rounded">Coastal Fire</span>
+                  <span class="text-xs font-bold text-brand-muted">Crafted Fresh</span>
+                </div>
+                <h3 class="text-xl font-bold font-heading text-brand-noir mb-2">SPICY SHRIMPA'DILLA</h3>
+                <p class="text-xs font-semibold text-brand-charcoal/70 mb-3">Chipotle Rubbed Shrimp, Hatch Green Chiles, Pico, Pineapple Relish, Spicy Slaw, Sour Cream</p>
+                <p class="text-xs text-brand-muted leading-relaxed">
+                  Char-grilled wild shrimp with chipotle crust, roasted smoky Hatch green chiles, tropical pineapple relish, crunchy spicy slaw, and cooling cultured crema.
+                </p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between text-xs font-bold">
+                <span class="text-brand-charcoal">Signature Selection</span>
+                <a href="#reserve" class="text-brand-red hover:underline">Select Dish →</a>
+              </div>
+            </div>
+
+            <!-- Card 7: CLASSA'DILLA -->
+            <div class="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm hover:border-brand-red/40 hover:shadow-lg transition-all flex flex-col justify-between">
+              <div class="flex flex-col flex-grow">
+                <div>
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-noir bg-stone-100 px-2.5 py-0.5 rounded">Classic Perfection</span>
+                    <span class="text-xs font-semibold text-brand-red">Custom Protein Upgrades Available</span>
+                  </div>
+                  <h3 class="text-2xl font-bold font-heading text-brand-noir mb-1">CLASSA'DILLA</h3>
+                  <p class="text-sm font-semibold text-brand-charcoal/80 mb-2">
+                    Shredded Cheddar &amp; Pepper Jack Cheeses, Sweet Peppers, Sautéed Onions, Fresh Pico de Gallo, Cultured Sour Cream
+                  </p>
+                  <p class="text-xs text-brand-muted max-w-2xl leading-relaxed">
+                    The baseline benchmark of artisanal execution. Buttery griddled golden flour tortilla, loaded with rich melting cheeses, fire-roasted sweet peppers, sweet vidalia onions, and chilled condiments.
+                  </p>
+                </div>
+                <!-- Custom Add-on Protein Tag Badges -->
+                <div class="mt-auto pt-6 flex flex-col sm:flex-row items-start sm:items-center gap-3 bg-brand-creamLight p-4 rounded-xl border border-stone-200/70 shrink-0">
+                  <div class="text-xs font-bold text-brand-noir uppercase tracking-wider">Premium Add-ons:</div>
+                  <div class="flex items-center gap-2">
+                    <span class="px-3 py-1 bg-white border border-stone-200 rounded-full text-xs font-bold text-brand-charcoal">Add Tender Chicken</span>
+                    <span class="px-3 py-1 bg-white border border-stone-200 rounded-full text-xs font-bold text-brand-charcoal">Add Seared Steak</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- BEVERAGES & ARTISAN SIDES SECTION (FROM MENU: SODAS, WATER, CHIPS) -->
+      <section id="beverages" class="py-16 sm:py-24 bg-brand-creamLight border-b border-brand-noir/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div class="lg:col-span-5">
+              <span class="text-xs font-bold text-brand-red uppercase tracking-widest block mb-2">Refreshments &amp; Crunch</span>
+              <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-brand-noir tracking-tight mb-4">
+                Chilled Drinks &amp; Bagged Chips
+              </h2>
+              <p class="text-sm sm:text-base text-brand-muted leading-relaxed mb-6">
+                Curated sodas, crisp mineral waters, and small-batch kettle chips selected to complement each quesadilla’s rich melted cheese profile.
+              </p>
+              <div class="p-4 bg-white rounded-xl border border-stone-200 shadow-sm flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-brand-sky/10 text-brand-sky flex items-center justify-center font-bold text-xl">
+                  ❄
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-brand-noir">Served Sub-Zero Chilled</h4>
+                  <p class="text-xs text-brand-muted">Ice service and boutique glassware for private catering receptions.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Drinks Directory Grid -->
+            <div class="lg:col-span-7">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Drink 1 -->
+                <div class="bg-white p-5 rounded-2xl border border-stone-200/80 shadow-sm flex flex-col justify-between">
+                  <div>
+                    <span class="text-[10px] font-bold uppercase text-brand-red bg-brand-red/10 px-2 py-0.5 rounded">Fountain Classics</span>
+                    <h3 class="text-base font-bold font-heading text-brand-noir mt-2">Chilled Soda &amp; Bottled Water</h3>
+                    <p class="text-xs text-brand-muted mt-1">Coke, Diet Coke, Sprite, &amp; Natural Spring Water served ice-cold.</p>
+                  </div>
+                  <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between text-xs font-bold text-brand-charcoal">
+                    <span>Ice Included</span>
+                    <span class="text-brand-red">Available</span>
+                  </div>
+                </div>
+
+                <!-- Drink 2 -->
+                <div class="bg-white p-5 rounded-2xl border border-stone-200/80 shadow-sm flex flex-col justify-between">
+                  <div>
+                    <span class="text-[10px] font-bold uppercase text-amber-700 bg-amber-50 px-2 py-0.5 rounded">Tropical Fizz</span>
+                    <h3 class="text-base font-bold font-heading text-brand-noir mt-2">Artisan Mango Soda</h3>
+                    <p class="text-xs text-brand-muted mt-1">Real mango nectar sparkle formulated to counterbalance spicy chipotle &amp; duck.</p>
+                  </div>
+                  <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between text-xs font-bold text-brand-charcoal">
+                    <span>House Favorite</span>
+                    <span class="text-brand-red">Available</span>
+                  </div>
+                </div>
+
+                <!-- Drink 3 -->
+                <div class="bg-white p-5 rounded-2xl border border-stone-200/80 shadow-sm flex flex-col justify-between">
+                  <div>
+                    <span class="text-[10px] font-bold uppercase text-brand-sky bg-brand-sky/10 px-2 py-0.5 rounded">Sparkling &amp; Hydration</span>
+                    <h3 class="text-base font-bold font-heading text-brand-noir mt-2">San Pellegrino &amp; Coconut Water</h3>
+                    <p class="text-xs text-brand-muted mt-1">Crisp Italian sparkling mineral water &amp; 100% pure organic coconut water.</p>
+                  </div>
+                  <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between text-xs font-bold text-brand-charcoal">
+                    <span>Premium Hydration</span>
+                    <span class="text-brand-red">Available</span>
+                  </div>
+                </div>
+
+                <!-- Chips 4 -->
+                <div class="bg-white p-5 rounded-2xl border border-stone-200/80 shadow-sm flex flex-col justify-between">
+                  <div>
+                    <span class="text-[10px] font-bold uppercase text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded">Crunch Factor</span>
+                    <h3 class="text-base font-bold font-heading text-brand-noir mt-2">Crispy Bagged Chips</h3>
+                    <p class="text-xs text-brand-muted mt-1">Kettle-cooked salted and seasoned chips providing the ideal savory bite.</p>
+                  </div>
+                  <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between text-xs font-bold text-brand-charcoal">
+                    <span>Individual Bags</span>
+                    <span class="text-brand-red">Available</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <footer class="border-t border-brand-noir/10 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex items-center justify-between gap-2">
+      <a href="index.html" aria-label="Visit IC-80 home">
+        <img src="assets/unnamed.jpg" alt="IC-80 Full-Proof Ice Cream Base" class="w-20 h-20 sm:w-24 sm:h-24 object-contain" />
+      </a>
+      <a href="Buenadillas.html" aria-label="Visit BUENA'DILLAS">
+        <img src="assets/Buena'Dillas.jpg" alt="BUENA'DILLAS" class="w-44 h-20 sm:w-56 sm:h-24 object-contain" />
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
