@@ -87,7 +87,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 h-18 sm:h-20 flex items-center justify-between">
         <!-- Brand Wordmark -->
           <div class="flex items-center gap-2">
-            <img src="./assets/Buena'Dillas.jpg" alt="Buena'Dillas Logo" class="w-75 h-24 object-cover border border-brand-noir/10 shadow-sm">
+            <img src="./assets/Buena'Dillas.jpg" alt="Buena'Dillas Logo" class="w-20 h-16 sm:w-24 sm:h-20 object-cover border border-brand-noir/10 shadow-sm">
           </div>
 
         <!-- Desktop Navigation Links -->
@@ -101,7 +101,7 @@
 
         <!-- CTA & Action Buttons -->
         <div class="flex items-center gap-3">
-          <a href="#reserve" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-brand-purple text-white text-xs sm:text-sm font-bold tracking-wide shadow-sm hover:bg-brand-purple/90 active:scale-95 transition-all">
+          <a href="#reserve" class="hidden md:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-brand-purple text-white text-xs sm:text-sm font-bold tracking-wide shadow-sm hover:bg-brand-purple/90 active:scale-95 transition-all">
             <span>Order Direct &amp; Catering</span>
             <svg class="w-3.5 h-3.5 ml-1.5 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -110,7 +110,29 @@
           <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2.5 rounded-full bg-white border border-brand-charcoal/10 text-xs sm:text-sm font-bold text-brand-charcoal hover:bg-stone-50 transition-all">
             Inquire
           </a>
+          <button
+            id="mobile-menu-toggle"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-controls="mobile-nav-menu"
+            aria-expanded="false"
+            class="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-full bg-white border border-brand-charcoal/10 text-brand-noir hover:bg-stone-50 active:scale-95 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+            </svg>
+          </button>
         </div>
+      </div>
+      <div id="mobile-nav-menu" class="hidden md:hidden border-t border-brand-noir/10 bg-brand-cream-light px-4 py-5 shadow-xl">
+        <nav class="flex flex-col space-y-1 text-sm font-semibold" aria-label="Mobile navigation">
+          <a href="#signature-creations" class="rounded-lg px-3 py-3 hover:bg-brand-purple/10 hover:text-brand-purple transition-colors">Signature Dillas</a>
+          <a href="Menu.html" class="rounded-lg px-3 py-3 hover:bg-brand-purple/10 hover:text-brand-purple transition-colors">Curated Menu</a>
+          <a href="#culinary-craft" class="rounded-lg px-3 py-3 hover:bg-brand-purple/10 hover:text-brand-purple transition-colors">The Craft</a>
+          <a href="Menu.html#beverages" class="rounded-lg px-3 py-3 hover:bg-brand-purple/10 hover:text-brand-purple transition-colors">Bespoke Drinks</a>
+          <a href="catering.html" class="rounded-lg px-3 py-3 hover:bg-brand-purple/10 hover:text-brand-purple transition-colors">Private Events</a>
+          <a href="#reserve" class="mt-2 inline-flex items-center justify-center rounded-full bg-brand-purple px-5 py-3 text-white">Order Direct &amp; Catering</a>
+        </nav>
       </div>
     </header>
 
@@ -463,5 +485,36 @@
         </div>
       </div>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggle = document.getElementById("mobile-menu-toggle");
+        const menu = document.getElementById("mobile-nav-menu");
+
+        if (!toggle || !menu) return;
+
+        function setMenu(open) {
+          menu.classList.toggle("hidden", !open);
+          toggle.setAttribute("aria-expanded", String(open));
+        }
+
+        toggle.addEventListener("click", function () {
+          setMenu(toggle.getAttribute("aria-expanded") !== "true");
+        });
+
+        menu.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            setMenu(false);
+          });
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") setMenu(false);
+        });
+
+        window.addEventListener("resize", function () {
+          if (window.innerWidth >= 768) setMenu(false);
+        });
+      });
+    </script>
   </body>
 </html>
